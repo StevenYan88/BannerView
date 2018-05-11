@@ -1,7 +1,10 @@
 # BannerView
 打造万能的BannerView
-**效果图**
 
+**为什么开源这个BannerView，因为在网上看到的绝大多数BannerView实现了右无限轮播图，甚至没有实现无限轮播图，说成是无限轮播图，实现了无限轮播图的，并没有做性能上的优化**
+
+
+**效果图**
 ![image](https://upload-images.jianshu.io/upload_images/1472453-d0c6af365e6276ee.gif?imageMogr2/auto-orient/strip)
 
 **布局去引用BannerView，设置下BannerView的属性**
