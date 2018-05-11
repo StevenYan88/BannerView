@@ -5,6 +5,7 @@
 
 
 **效果图**
+
 ![image](https://upload-images.jianshu.io/upload_images/1472453-d0c6af365e6276ee.gif?imageMogr2/auto-orient/strip)
 
 **布局去引用BannerView，设置下BannerView的属性**
