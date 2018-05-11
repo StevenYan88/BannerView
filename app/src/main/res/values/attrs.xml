@@ -1,0 +1,28 @@
+<resources>
+
+
+    <declare-styleable name="BannerView">
+        <attr name="dotIndicatorFocus" format="color|reference"/>
+        <attr name="dotIndicatorNormal" format="color|reference"/>
+        <attr name="dotSize" format="dimension"/>
+        <attr name="dotDistance" format="dimension"/>
+        <attr name="dotGravity" format="enum">
+
+            <enum name="center" value="0"/>
+            <enum name="right" value="1"/>
+            <enum name="left" value="-1"/>
+        </attr>
+        <attr name="bottomColor" format="color|reference"/>
+
+    </declare-styleable>
+
+    <declare-styleable name="DotIndicatorView">
+
+        <attr name="shape" format="enum">
+            <enum name="rect" value="1"/>
+            <enum name="circle" value="2"/>
+        </attr>
+
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.steven.bannerview.banner.BannerView
+        android:id="@+id/bannerView"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        app:bottomColor="#453e3e3e"
+        app:dotDistance="2dp"
+        app:dotGravity="center"
+        app:dotIndicatorFocus="#ff0000"
+        app:dotIndicatorNormal="#ffffff"
+        app:dotSize="6dp"/>
+
+</RelativeLayout>
