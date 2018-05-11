@@ -1,6 +1,6 @@
 # BannerView
 
-# 打造万能的BannerView
+### 打造万能的BannerView
 
 **为什么开源这个BannerView，因为在网上看到的绝大多数BannerView实现了右无限轮播图，甚至没有实现无限轮播图，说成是无限轮播图，实现了左右无限轮播图的，并没有做性能上的优化**
 
