@@ -6,8 +6,11 @@
 
 **性能优化：**
 1、离开窗口时handelr需要removeMessage  
-2、轮播图的View的复用   
+
+2、轮播图的View的复用  
+
 3、点击home键，轮播图还在内存中走，需要监听下Activity的生命周期。  
+
 
 **效果图**
 
