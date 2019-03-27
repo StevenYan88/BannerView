@@ -8,13 +8,12 @@ import android.graphics.drawable.Drawable;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.view.Gravity;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 import com.steven.bannerview.R;
-import com.steven.bannerview.transformer.SlidePageTransformer;
+import com.steven.bannerview.transformer.ScalePageTransformer;
 import com.steven.bannerview.utils.DensityUtil;
 
 
@@ -95,7 +94,9 @@ public class BannerView extends RelativeLayout {
         mDotContainerView = findViewById(R.id.dot_container);
         mBannerBottomView = findViewById(R.id.bannerBottomView);
         mBannerBottomView.setBackgroundColor(mBottomColor);
-        mBannerViewPager.setPageTransformer(false, new SlidePageTransformer());
+        mBannerViewPager.setPageMargin(30);
+        mBannerViewPager.setOffscreenPageLimit(3);
+        mBannerViewPager.setPageTransformer(false, new ScalePageTransformer());
     }
 
     /**
@@ -175,10 +176,5 @@ public class BannerView extends RelativeLayout {
                 return Gravity.LEFT;
         }
         return Gravity.RIGHT;
-    }
-
-    @Override
-    public boolean onTouchEvent(MotionEvent event) {
-        return super.onTouchEvent(event);
     }
 }

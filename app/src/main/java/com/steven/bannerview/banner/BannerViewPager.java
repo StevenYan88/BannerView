@@ -105,6 +105,8 @@ public class BannerViewPager extends ViewPager {
     }
 
     private class BannerPagerAdapter extends PagerAdapter {
+
+
         /**
          * 给一个很大的值，为了实现无限轮播
          * 这个方法是会给ViewPager有多少个View

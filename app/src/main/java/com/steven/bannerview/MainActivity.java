@@ -10,7 +10,8 @@ import com.steven.bannerview.banner.BannerAdapter;
 import com.steven.bannerview.banner.BannerView;
 
 public class MainActivity extends AppCompatActivity {
-    private String[] mUrls = {"http://pb9.pstatp.com/origin/24990000d4c26180d691", "http://pb9.pstatp.com/origin/1dcf002c646ac321e698"};
+    private String[] mUrls = {"http://pb9.pstatp.com/origin/24990000d4c26180d691", "http://pb9.pstatp.com/origin/1dcf002c646ac321e698",
+            "http://pb9.pstatp.com/origin/1dcf002c646ac321e698"};
     private BannerView mBannerView;
 
     @Override
@@ -29,11 +30,7 @@ public class MainActivity extends AppCompatActivity {
                     bannerIv = ( ImageView ) convertView;
                     Log.i("TAG", "getView: 界面复用" + bannerIv);
                 }
-                if (position == 0) {
-                    GlideApp.with(MainActivity.this).load(mUrls[0]).into(bannerIv);
-                } else {
-                    GlideApp.with(MainActivity.this).load(mUrls[1]).into(bannerIv);
-                }
+                GlideApp.with(MainActivity.this).load(mUrls[position]).into(bannerIv);
                 return bannerIv;
             }
 

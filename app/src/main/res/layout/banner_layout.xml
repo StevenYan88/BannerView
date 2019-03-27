@@ -3,12 +3,16 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:clipChildren="false"
     android:layout_height="match_parent">
-
+    <!--在ViewPager的父布局里加入一条属性android:clipChildren="false"，意思是让子控件不局限于自己的内部，
+    然后设置下ViewPager的margin值，距离左右一段距离，用来显示当前页左右两边的Page；-->
     <com.steven.bannerview.banner.BannerViewPager
         android:id="@+id/bannerViewPager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"/>
 
     <RelativeLayout
         android:id="@+id/bannerBottomView"
