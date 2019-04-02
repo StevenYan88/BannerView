@@ -3,10 +3,10 @@
 **为什么开源这个BannerView，因为在网上看到的绝大多数BannerView实现了右无限轮播图，甚至没有实现无限轮播图，说成是无限轮播图，实现了左右无限轮播图的，并没有做性能上的优化。**   
 
 **性能优化：**  
-1、离开窗口时handelr需要removeMessage，以免内存造成内存泄露；  
-2、轮播图的View的复用；    
+1、离开窗口时handelr需要removeMessage，以免造成内存泄露；  
+2、轮播图的View的复用，优化下内存；    
 3、点击home键，轮播图还在内存中走，需要监听下Activity的生命周期，  
-   在onPasuee()方法中，handelr需要removeMessage，以免内存造成内存泄露；   
+   在onPasuee()方法中，handelr需要removeMessage，以免造成内存泄露；   
 
 
 **效果图**
