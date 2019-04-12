@@ -6,15 +6,15 @@
     android:orientation="vertical">
 
     <com.steven.bannerview.banner.BannerView
-
         android:id="@+id/bannerView"
         android:layout_width="match_parent"
         android:layout_height="120dp"
         app:bottomColor="#453e3e3e"
         app:dotDistance="2dp"
-        app:dotGravity="center"
+        app:dotGravity="right"
         app:dotIndicatorFocus="#ff0000"
         app:dotIndicatorNormal="#ffffff"
+        app:dotShape="circle"
         app:dotSize="6dp" />
 
 
@@ -79,13 +79,11 @@
         android:layout_height="wrap_content"
         android:paddingLeft="8dp"
         android:text="指示器位置"
-        android:textColor="#333"
-        android:visibility="gone" />
+        android:textColor="#333" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:visibility="gone">
+        android:layout_height="wrap_content">
 
         <Button
             android:id="@+id/position1"

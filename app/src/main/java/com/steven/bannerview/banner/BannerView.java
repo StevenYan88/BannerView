@@ -37,7 +37,7 @@ public class BannerView extends RelativeLayout {
     //当前页面的位置
     private int mCurrentPosition;
     //指示器的位置
-    private int mDotGravity = -1;
+    private int mDotGravity = 1;
     //指示器的形状
     private int mDotShape = 0;
     //指示器的大小
@@ -72,7 +72,7 @@ public class BannerView extends RelativeLayout {
      */
     private void initAttribute(AttributeSet attrs) {
         TypedArray typedArray = mContext.obtainStyledAttributes(attrs, R.styleable.BannerView);
-        mDotGravity = typedArray.getInt(R.styleable.BannerView_dotGravity, -1);
+        mDotGravity = typedArray.getInt(R.styleable.BannerView_dotGravity, 1);
         mDotShape = typedArray.getInt(R.styleable.BannerView_dotShape, 0);
         mIndicatorFocusDrawable = typedArray.getDrawable(R.styleable.BannerView_dotIndicatorFocus);
         if (mIndicatorFocusDrawable == null) {
@@ -97,6 +97,8 @@ public class BannerView extends RelativeLayout {
         mDotContainerView = findViewById(R.id.dot_container);
         mBannerBottomView = findViewById(R.id.bannerBottomView);
         mBannerBottomView.setBackgroundColor(mBottomColor);
+        //指定指示器的位置
+        mDotContainerView.setGravity(getDotGravity(mDotGravity));
     }
 
     /**
@@ -140,8 +142,6 @@ public class BannerView extends RelativeLayout {
         mDotContainerView.removeAllViews();
         //获取广告位的数量
         int count = mAdapter.getCount();
-        //设置指示器的位置
-        mDotContainerView.setGravity(getDotGravity(1));
         for (int i = 0; i < count; i++) {
             DotIndicatorView dot = new DotIndicatorView(mContext);
             LinearLayout.LayoutParams param;
@@ -194,6 +194,7 @@ public class BannerView extends RelativeLayout {
         if (this.mDotGravity == dotGravity) {
             return;
         }
+        this.mDotGravity = dotGravity;
         mDotContainerView.setGravity(getDotGravity(dotGravity));
     }
 }
