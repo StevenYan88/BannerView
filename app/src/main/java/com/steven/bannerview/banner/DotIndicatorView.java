@@ -27,10 +27,11 @@ import com.steven.bannerview.utils.DensityUtil;
 public class DotIndicatorView extends View {
     //形状
     private int mShape;
+    // 圆形
+    public static final int SHAPE_CIRCLE = 0;
     // 矩形
     public static final int SHAPE_REC = 1;
-    // 圆形
-    public static final int SHAPE_CIRCLE = 2;
+
     private Drawable mDrawable;
 
     public DotIndicatorView(Context context) {
