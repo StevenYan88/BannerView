@@ -1,5 +1,6 @@
 package com.steven.bannerview;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -14,9 +15,9 @@ import com.steven.bannerview.transformer.CubeOutTransformer;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private static final String TAG = MainActivity.class.getSimpleName();
-    private String[] mUrls = {"http://pb9.pstatp.com/origin/24990000d4c26180d691",
-            "http://pb9.pstatp.com/origin/1dcf002c646ac321e698",
-            "http://pb9.pstatp.com/origin/1dcf002c646ac321e698"};
+    private final String[] mUrls = {"https://pics4.baidu.com/feed/3812b31bb051f819979b8581d0ee77e72f73e727.png?token=081a892350d5ae1f023b40045c981cfd",
+            "https://pics3.baidu.com/feed/9358d109b3de9c82779c706464dbbd001bd843c0.jpeg?token=5fd819b0f2f70a025397fc761d5d1b78",
+            "https://pics4.baidu.com/feed/f9198618367adab47c5ba53b9b8e8e168601e4a7.png?token=25fd2f175bec6555a8bd0def4fb98dbf"};
     private BannerView mBannerView;
     private BannerViewPager mBannerViewPager;
 
@@ -41,6 +42,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void setupBannerView() {
         mBannerViewPager = mBannerView.getBannerViewPager();
+        mBannerViewPager.setPageTransformer(false, new CubeOutTransformer());
         mBannerView.setAdapter(mBannerAdapter);
         mBannerView.setScrollerDuration(1288);
         mBannerView.startLoop();
@@ -52,7 +54,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             ImageView bannerIv;
             if (convertView == null) {
                 bannerIv = new ImageView(MainActivity.this);
-                bannerIv.setScaleType(ImageView.ScaleType.FIT_XY);
+                bannerIv.setScaleType(ImageView.ScaleType.CENTER_CROP);
             } else {
                 bannerIv = (ImageView) convertView;
                 Log.d(TAG, "getView: 界面复用" + bannerIv);
@@ -68,6 +70,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     };
 
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View v) {
         switch (v.getId()) {

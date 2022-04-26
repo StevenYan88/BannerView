@@ -28,10 +28,10 @@ public class BannerViewPager extends ViewPager {
     private static final String TAG = BannerViewPager.class.getSimpleName();
     private static final int SCROLL_MSG = 0x011;
     private BannerAdapter mBannerAdapter;
-    private int mCutDownTime = 3000;
+    private final int mCutDownTime = 3000;
     private BannerScroller mBannerScroller;
     //内存优化界面复用
-    private List<View> mConvertView;
+    private final List<View> mConvertView;
     @SuppressLint("HandlerLeak")
     private Handler mHandler = new Handler() {
         @Override
